@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Box, TextField, Button, Typography, Stack } from '@mui/material';
+import { Box, TextField,  Typography, Stack } from '@mui/material';
 
 const BMICalculator = () => {
   const [weight, setWeight] = useState('');
@@ -8,31 +8,31 @@ const BMICalculator = () => {
   const [category, setCategory] = useState('');
   const [exercises, setExercises] = useState([]);
 
-  const handleCalculate = () => {
-    if (!weight || !height) return;
+  // const handleCalculate = () => {
+  //   if (!weight || !height) return;
 
-    const heightInMeters = height / 100;
-    const bmiValue = (weight / (heightInMeters * heightInMeters)).toFixed(1);
-    setBmi(bmiValue);
+  //   const heightInMeters = height / 100;
+  //   const bmiValue = (weight / (heightInMeters * heightInMeters)).toFixed(1);
+  //   setBmi(bmiValue);
 
-    let cat = '';
-    let exerciseSuggestions = [];
+  //   let cat = '';
+  //   let exerciseSuggestions = [];
 
-    if (bmiValue < 18.5) {
-      cat = 'Underweight';
-    } else if (bmiValue >= 18.5 && bmiValue < 24.9) {
-      cat = 'Normal weight';
-    } else if (bmiValue >= 25 && bmiValue < 29.9) {
-      cat = 'Overweight';
-      exerciseSuggestions = ['Brisk walking', 'Cycling', 'Swimming', 'Strength training'];
-    } else {
-      cat = 'Obese';
-      exerciseSuggestions = ['Walking', 'Low-impact cardio', 'Yoga', 'Resistance training'];
-    }
+  //   if (bmiValue < 18.5) {
+  //     cat = 'Underweight';
+  //   } else if (bmiValue >= 18.5 && bmiValue < 24.9) {
+  //     cat = 'Normal weight';
+  //   } else if (bmiValue >= 25 && bmiValue < 29.9) {
+  //     cat = 'Overweight';
+  //     exerciseSuggestions = ['Brisk walking', 'Cycling', 'Swimming', 'Strength training'];
+  //   } else {
+  //     cat = 'Obese';
+  //     exerciseSuggestions = ['Walking', 'Low-impact cardio', 'Yoga', 'Resistance training'];
+  //   }
 
-    setCategory(cat);
-    setExercises(exerciseSuggestions);
-  };
+  //   setCategory(cat);
+  //   setExercises(exerciseSuggestions);
+  // };
 
   return (
     <Box sx={{ maxWidth: 400, mx: 'auto', mt: 5, p: 3, border: '1px solid #ccc', borderRadius: 2 }}>
