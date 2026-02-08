@@ -4,9 +4,10 @@ import { Box, TextField,  Typography, Stack } from '@mui/material';
 const BMICalculator = () => {
   const [weight, setWeight] = useState('');
   const [height, setHeight] = useState('');
-  const [bmi, setBmi] = useState(null);
-  const [category, setCategory] = useState('');
-  const [exercises, setExercises] = useState([]);
+const [bmi] = useState('');
+const [category] = useState('');
+const [exercises] = useState([]);
+
 
   // const handleCalculate = () => {
   //   if (!weight || !height) return;
